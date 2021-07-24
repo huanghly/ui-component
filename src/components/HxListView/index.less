@@ -1,0 +1,88 @@
+.hx-list-view-container {
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 44px;
+  .am-list-footer {
+    .custom-footer-wrap {
+      text-align: center;
+      width: 100%;
+    }
+    .no-more-data-wrap {
+      text-align: center;
+      width: 100%;
+    }
+  }
+.pull-refresh-slogan-container,
+.am-list {
+  //listview组件会把外壳的组件去掉,所以要兼容listview中的指示器样式
+  .pull-slogan-block {
+    height: 60px;
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+  .am-pull-to-refresh-indicator {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+  }
+  .slogan-bg {
+    width: 80vw;
+    height: auto;
+    object-fit: contain;
+  }
+}
+.pull-refresh-slogan-container {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.record-list-empty {
+	background: #fff;
+	text-align: center;
+	img {
+		margin-top: 120px;
+		width: 156px;
+		height: 130px;
+		object-fit: contain;
+		margin-bottom: 28px;
+	}
+	p {
+		font-size: 16px;
+		font-weight: 400;
+		color: rgba(0, 0, 0, 0.6);
+		line-height: 28px;
+	}
+ }
+
+ .hx-starfish-empty {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
+   padding: 44px 24px 0;
+  .hx-starfish-empty-image {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+     img {
+       display: block;
+       width: 200px;
+       height: 200px;
+     }
+  
+   }
+   .hx-starfish-empty-description {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+ }
+
+}
+
