@@ -55,7 +55,7 @@ const stylePluginConfig = {
 };
 const umdOutput = { 
   format: 'umd',
-  name: 'RollupUI',
+  name: 'aistarfish-mobileui',
   globals,
   assetFileNames: '[name].[ext]'
 };
@@ -75,7 +75,7 @@ const esStylePluginConfig = {
   ...stylePluginConfig, 
   sourceMap: true, // 必须开启，否则 rollup-plugin-styles 会有 bug
   onExtract(data) {
-    // 一下操作用来确保只输出一个 index.css
+    // 以下操作用来确保只输出一个 index.css
     const {css, name, map} = data;
     const {base} = path.parse(name);
     if (base !== 'index.css') return false;
@@ -88,12 +88,12 @@ export default () => {
     case 'umd':
       return [{
         input: entryFile,
-        output: {...umdOutput, file: 'dist/umd/rollup-ui.development.js'},
+        output: {...umdOutput, file: 'dist/umd/aistarfish-mobileui.development.js'},
         external,
         plugins: [styles(stylePluginConfig), ...commonPlugins]
       }, {
         input: entryFile,
-        output: {...umdOutput, file: 'dist/umd/rollup-ui.production.min.js', plugins: [terser()]},
+        output: {...umdOutput, file: 'dist/umd/aistarfish-mobileui.production.min.js', plugins: [terser()]},
         external,
         plugins: [styles({...stylePluginConfig, minimize: true}), ...commonPlugins]
       }];

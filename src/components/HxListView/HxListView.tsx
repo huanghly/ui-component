@@ -9,7 +9,6 @@ import './index.less';
 interface IFilterParams {
   current?: number;
   size?: number;
-
   [propName: string]: any;
 }
 interface CallbackResult {
