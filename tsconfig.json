@@ -11,7 +11,7 @@
     "allowJs": false, /* 允许编辑 .js 文件，设置为 false 后 .js | .jsx 不会被当做 ts 处理 */
     "checkJs": false, /* 检查 .js 文件，并报错 */
     "jsx": "preserve", /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
-    // "declaration": true,                      /* 生成对应的 '.d.ts' 文件，默认位置与 .ts 文件相同 */
+    "declaration": true,                      /* 生成对应的 '.d.ts' 文件，默认位置与 .ts 文件相同 */
     // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
     // "sourceMap": true,                     /* Generates corresponding '.map' file. */
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
@@ -20,7 +20,7 @@
     // "composite": true,                     /* Enable project compilation */
     // "tsBuildInfoFile": "./",               /* Specify file to store incremental compilation information */
     // "removeComments": true,                /* Do not emit comments to output. */
-    // "emitDeclarationOnly": true,
+    "emitDeclarationOnly": false,
     "noEmit": true, /* Do not emit outputs. */
     // "importHelpers": true,                 /* Import emit helpers from 'tslib'. */
     // "downlevelIteration": true,            /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */

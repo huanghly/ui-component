@@ -12,7 +12,6 @@ import eslint from '@rollup/plugin-eslint';
 import styles from 'rollup-plugin-styles';
 import {terser} from 'rollup-plugin-terser';
 import autoprefixer from 'autoprefixer';
-
 const entryFile = 'src/index.ts';
 const BABEL_ENV = process.env.BABEL_ENV || 'umd';
 const extensions = ['.js', '.ts', '.tsx','jsx'];
@@ -22,7 +21,7 @@ BABEL_ENV !== 'umd' && externalPkg.push('@babel/runtime');
 const external = id => externalPkg.some(e => id.indexOf(e) === 0);
 const componentDir = 'src/components';
 const cModuleNames = fs.readdirSync(path.resolve(componentDir));
-const componentEntryFiles = cModuleNames.map((name) => /^[A-Z]\w*/.test(name) ? `${componentDir}/${name}/index.tsx` : undefined).filter(n => !!n);
+const componentEntryFiles = cModuleNames.map((name) => /^[A-Z]\w*/.test(name) ? (`${componentDir}/${name}/index.tsx` || `${componentDir}/${name}/index.ts`) : undefined).filter(n => !!n);
 
 const commonPlugins = [
   image(),
