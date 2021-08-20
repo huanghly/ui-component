@@ -1,0 +1,107 @@
+@mixin icon-style {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hx-h5-narbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  height: 45px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    transform: scaleY(0.5);
+    border-top: 1px solid rgb(216, 216, 216);
+  }
+
+  &.no-line::after {
+    border: none;
+  }
+
+  // 返回按钮
+  .icon-back {
+    @include icon-style;
+    width: 10px;
+    height: 40px;
+    background-image: url('//static.aistarfish.com/front-release/file/F2020042911100296600009677.back.png');
+  }
+
+  .icon-close {
+    margin-left: 15px;
+    @include icon-style;
+    width: 15px;
+    height: 40px;
+    background-image: url('//static.aistarfish.com/front-release/file/F2020071515492763000001105.close.png');
+  }
+
+  // 标题
+  .am-navbar-title {
+    font-size: 20px;
+    color: #2b2b2b;
+  }
+
+  .am-navbar-right {
+    .icon-item:not(:first-child) {
+      margin-left: 16px;
+    }
+
+    // 分享按钮
+    .icon-share {
+      @include icon-style;
+      width: 20px;
+      height: 20px;
+      background-image: url('//static.aistarfish.com/front-release/file/F2020042911100299900007845.shareBtn.png');
+      position: relative;
+    }
+
+    .share-info {
+      position: absolute;
+      top: 34px;
+      left: -20px;
+      background: #edf6ff;
+      border-radius: 13px;
+      opacity: 0.97;
+      padding: 2px 10px;
+
+      span {
+        font-size: 13px;
+        color: #2969a3;
+        line-height: 22px;
+        word-break: keep-all;
+      }
+
+      .border-triangle {
+        position: absolute;
+        top: -12px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 14px solid #edf6ff;
+      }
+    }
+
+    // 收藏按钮
+    .icon-collect {
+      @include icon-style;
+      width: 20px;
+      height: 20px;
+      background-image: url('//static.aistarfish.com/front-release/file/F2020042911100299800009156.collect_unselected.png');
+      position: relative;
+    }
+
+    .icon-collect-active {
+      background-image: url('//static.aistarfish.com/front-release/file/F2020042911100302100007311.collect.png');
+    }
+  }
+}

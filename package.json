@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/testgeet/hxstarfish-ui.git"
+    "url": "https://gitee.com/aistarfish/hxstarfish-ui"
   },
   "keywords": [
     "react",
@@ -113,13 +113,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "antd-mobile": "^2.3.4",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "antd-mobile": "^2.3.4"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17",
-    "react-dom": "^16.8.0 || ^17"
+    "react": "16.8.0",
+    "react-dom": "16.8.0"
   },
   "sideEffects": [
     "dist/umd/*",
